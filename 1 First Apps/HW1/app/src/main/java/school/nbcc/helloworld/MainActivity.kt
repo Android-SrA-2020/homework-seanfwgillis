@@ -3,8 +3,11 @@ package school.nbcc.helloworld
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import school.nbcc.helloworld.R.id.dice_image1
+import school.nbcc.helloworld.R.id.dice_image2
 import java.lang.NumberFormatException
 import kotlin.random.Random
 import java.lang.Integer.parseInt
@@ -12,61 +15,56 @@ import java.lang.Integer.parseInt
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var diceImage1: ImageView
+    lateinit var diceImage2: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        diceImage1 = findViewById(dice_image1)
+        diceImage2 = findViewById(dice_image2)
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{rollDice()}
 
-        val countUp: Button = findViewById(R.id.count_up)
-        countUp.setOnClickListener{countUp()}
-
-        val reset: Button = findViewById(R.id.reset)
-        reset.setOnClickListener{reset()}
 
     }
 
     private fun rollDice(){
-        val randomInt = Random.nextInt(6) + 1
-        // Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
-        val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = randomInt.toString()
+        val randomInt1 = Random.nextInt(6) + 1
+        val randomInt2 = Random.nextInt(6) + 1
+
+        check(randomInt1,randomInt2)
 
     }
 
-    private fun countUp(){
-        val view: TextView = findViewById(R.id.result_text)
-        val text: String = view.text.toString()
-        var isNumber = true
-        var number: Int
-
-
-        try {
-            number = parseInt(text)
-        } catch (e: NumberFormatException){
-            isNumber = false;
-        }
-
-        if (isNumber){
-            number = parseInt(text)
-            if (number == 6){
-
+    private fun check(first: Int, second: Int){
+        if (first != second){
+            val drawableResource1 = when (first){
+                1 -> R.drawable.dice_1
+                2 -> R.drawable.dice_2
+                3 -> R.drawable.dice_3
+                4 -> R.drawable.dice_4
+                5 -> R.drawable.dice_5
+                else -> R.drawable.dice_6
             }
-            else {
-                number ++;
+
+            val drawableResource2 = when (second){
+                1 -> R.drawable.dice_1
+                2 -> R.drawable.dice_2
+                3 -> R.drawable.dice_3
+                4 -> R.drawable.dice_4
+                5 -> R.drawable.dice_5
+                else -> R.drawable.dice_6
             }
-            view.text = number.toString()
+
+            diceImage1.setImageResource(drawableResource1)
+            diceImage2.setImageResource(drawableResource2)
         }
-        else
-        {
-            number = 1;
-            view.text = number.toString()
+        else {
+            rollDice();
         }
     }
 
-    private fun reset(){
-        val view: TextView = findViewById(R.id.result_text)
-        view.text = "0"
-    }
+
 }
