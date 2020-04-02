@@ -12,4 +12,7 @@
 \n\nI have predisposition of seeing the best in everyone, and am empathetic to a fault.
 \n\nI also love curvy women.
 \nMy partner is curvy, and god-damn she is sexy to me.\n\n</string>
+    <!-- below was added as per this codelab -->
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
 </resources>
