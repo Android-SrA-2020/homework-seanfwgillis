@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1834e05-749a-4657-b5fb-194c01ffbc81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../7.1/RecyclerViewFundamentals-Starter/app/src/main/java/com/example/android/trackmysleepquality/sleeptracker/SleepNightAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../7.1/RecyclerViewFundamentals-Starter/app/src/main/res/layout/list_item_sleep_night.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../7.1/RecyclerViewFundamentals-Starter/app/src/main/res/layout/test_item_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../7.2/RecyclerViewDiffUtilDataBinding-Starter/app/src/main/java/com/example/android/trackmysleepquality/sleeptracker/BindingUtils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../1 First Apps/1.4.1/sunflower" beforeDir="false" afterPath="$PROJECT_DIR$/../../../1 First Apps/1.4.1/sunflower" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../5 ViewModelsAndFactories/GuessTheWord-Starter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5 ViewModelsAndFactories/GuessTheWord-Starter/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,6 +251,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../android-kotlin-fundamentals-apps/RecyclerViewClickHandler" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
